@@ -2,7 +2,7 @@
 # Site Settings
 title: "Emblemicons"
 url: ""
-baseurl: "/emblemicons.github.io"
+baseurl: ""
 
 # Values For SEO
 description: "An open-source free to use library of 1000+ most commonly and frequently used icons"
