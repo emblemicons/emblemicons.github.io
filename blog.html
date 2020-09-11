@@ -1,0 +1,36 @@
+---
+layout: default
+title: "The Emblemicons Blog"
+---
+<section class="jumbotron" style="background-color:#202020;">
+    <div class="container  text-center">
+        <h1 class="text-white">
+            <b>The Emblemicons Blog</b>
+        </h1>
+        <h6 class="lead text-light pt-3">
+            A home for all the updates, announcements, tips & tricks, design process and motivation behind the project
+        </h6>
+    </div>
+</section>
+<section class="container-fluid">
+    <div class="container">
+        <h2 class="pb-3">All Posts</h2>
+        <div class="row row-cols-1 row-cols-lg-2">
+            {% for post in site.posts %}
+            <div class="col mb-4">
+                <div class="card mb-3">
+                    <div class="d-flex justify-content-center img-container">
+                        <img src="{{ post.image | realtive_url }}" class="img-card-top" alt="{{ post.alt }}">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title" style="color: #8900B9;">{{ post.title }}</h4>
+                        <h6 class="card-sub-title text-muted">{{ post.date | date_to_string }}</h6>
+                        <p class="card-text text-dark text-justify pt-2" style="font-size: 1.2rem;">{{ post.excerpt }}</p>
+                        <a href="{{ post.url | relative_url }}" class="btn btn-primary">Continue Reading</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

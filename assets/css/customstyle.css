@@ -1,0 +1,21 @@
+/* To disable the save as and open in new tab options for SVG images */
+.img-container {
+    position: relative;
+}
+
+.img-container:after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+}
+
+/* For width of blog posts on large and extra large set to 60% */
+@media only screen and (min-width: 992px) {
+    .blog {
+        width: 60%;
+    }
+}

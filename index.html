@@ -1,0 +1,52 @@
+---
+layout: home
+title: "An open-source free to use library of 1000+ most commonly and frequently used icons"
+---
+<section class="jumbotron" style="background-color:#202020;">
+    <div class="container">
+        <h3 class="text-primary">
+            Emblemicons is an open-source library of most commonly and frequetly used icons in product development, product design, business presentations, and academic projects.
+            You are completely free to use and dowload the icons for your personal and business requirements.
+        </h3>
+        <h5 class="text-white pt-5">With Emblemicons, you can choose from a pool of 1000+ frequently used icons and do the following 4 things:</h5>
+        <ol class="lead text-light pt-1 pb-2">
+            <li>You can download PNG and JPG images in 6 available sizes (12px, 18px, 24px,  36px, 48px, 72px).</li>
+            <li>You can download SVG file and style it with CSS.</li>
+            <li>You can download PDF file too.</li>
+            <li>You can copy the HTML code and use in your projects directly.</li>
+        </ol>
+        <a class="btn btn-primary btn-lg" href="{{ "/blog.html" | relative_url }}" role="button">Read Blog</a>
+        <a class="btn btn-primary btn-lg ml-4" href="{{ "#icons" | relative_url }}" role="button">Show Icons</a>
+    </div>
+</section>
+<section class="container-fluid" id="icons">
+    <div class="container">
+        <h2 class="text-primary pb-2">Icons</h2>
+        <input class="form-control rounded-pill border border-primary mx-auto mb-2" id="userInput" type="text" placeholder="Start typing to filter icons..." style="width:60%; font-size:1.2rem;">
+        <br>
+        <ul class="row row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 row-cols-xl-6 list-unstyled" id="iconsList">
+            {% for icon in site.icons %}
+            <li class="col mb-4">
+                <div class="card">
+                    <div class="card-body bg-light">
+                        <div style="height:100px; width:100%" class="d-flex justify-content-center img-container">
+                            <img src="{{ icon.svg | relative_url }}" height="48px" width="48px" class="align-self-center" alt="{{ icon.alt }}">
+                        </div>
+                    </div>
+                </div>
+                <h6 class="text-center pt-3"><a href="{{ icon.url | relative_url }}" class="text-muted" style="font-size: 0.8rem;">{{ icon.title }}</a></h6>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $("#userInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#iconsList li").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
+</section>

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<section class="jumbotron" style="background-color:#202020;">
+    <div class="container  text-center">
+        <h1 class="text-white">
+            <b>The Emblemicons Blog</b>
+        </h1>
+        <h6 class="lead text-light pt-3">
+            A home for all the updates, announcements, tips & tricks, design process and motivation behind the project
+        </h6>
+    </div>
+</section>
+<div class="container blog">
+    <h1 class="pt-4" style="color: #8900B9;">{{ page.title }}</h1>
+    <h5 class="text-muted pb-4">{{ page.date | date_to_string }}</h5>
+    {{ content }}
+    <h6 class="pb-4"></h6>
+</div>
