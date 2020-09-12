@@ -11,8 +11,10 @@ Emblemicons was born as a weekend-project to make the most commonly and frequent
 Emblemicons is a home to 1000+ icons which are used commonly in digital product development, business and academic projects. 
 We are making available icons in outline and filled themes. 
 You will also find a good number of icons drawn and designed in circle and square themes. 
-We have drawn and designed icons of different categories, like arrow, content, file, folders, mobile device, social media, navigation and so on, covering the most commonly used icons in digital product design.
+
 ![Icons Preview Image](https://emblemicons.in/assets/blog/emblemicons-1.1.0-large.png)
+
+We have drawn and designed icons of different categories, like arrow, content, file, folders, mobile device, social media, navigation and so on, covering the most commonly used icons in digital product design.
 
 ## Free for use and download
 We have covered a wide variety of file formats for different use scenarios. 
